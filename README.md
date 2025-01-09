@@ -1,163 +1,138 @@
 # ESLint Config Generator
 
-[![CI](https://github.com/kadricaabuk/eslint-config-generator/actions/workflows/ci.yml/badge.svg)](https://github.com/kadricaabuk/eslint-config-generator/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/eslint-config-generator.svg)](https://badge.fury.io/js/eslint-config-generator)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-A powerful CLI tool to generate customized ESLint configurations for your JavaScript and TypeScript projects. This tool helps you create optimal ESLint configurations based on your project requirements and coding style preferences.
+A powerful and flexible ESLint configuration generator with support for multiple frameworks, features, and coding styles.
 
 ## Features
 
-- 🚀 Interactive CLI interface
-- ✨ Support for JavaScript and TypeScript projects
-- 🔧 Customizable coding style preferences
-- 📦 Popular framework configurations (React, Vue, Node.js)
-- 🎯 Best practices and recommended rules
-- 🔄 Easy configuration updates
-- 📝 Detailed documentation and examples
+- 🎯 **Framework Support**
+  - React
+  - Vue.js
+  - Next.js
+  - Express
+  - Node.js
+  - Angular
+  - Svelte
+  - Nuxt.js
+
+- 🛠 **Additional Features**
+  - Prettier Integration
+  - Import/Export Rules
+  - Jest Testing Support
+  - Accessibility (A11y) Rules
+  - Performance Rules
+  - Security Rules
+
+- 💅 **Customizable Style Options**
+  - Indentation (spaces/tabs)
+  - Quotes (single/double)
+  - Semicolons (always/never)
+  - Trailing Commas
+  - Line Endings
+  - Maximum Line Length
+  - Bracket Style
+  - Array/Object Formatting
 
 ## Installation
-
-You can install the package globally using npm:
 
 ```bash
 npm install -g eslint-config-generator
 ```
 
-Or use it directly with npx:
-
-```bash
-npx eslint-config-generator
-```
-
 ## Usage
 
-1. Navigate to your project directory:
-```bash
-cd your-project
-```
+### Basic Usage
 
-2. Run the configuration generator:
+Simply run the following command in your project directory:
+
 ```bash
 eslint-config-generator
 ```
 
-3. Follow the interactive prompts to configure:
-   - Project type (JavaScript/TypeScript)
-   - Framework selection
-   - Coding style preferences
-   - Additional plugins and rules
+Follow the interactive prompts to configure your ESLint setup.
 
-4. The tool will generate an `.eslintrc.json` file with your selected configurations.
+### Custom Rule Sets
+
+You can create and manage custom rule sets:
+
+1. Create a `.eslint-custom-rules.json` file
+2. Add your custom rules:
+
+```json
+{
+  "name": "MyCustomRules",
+  "description": "Custom rules for my project",
+  "rules": [
+    {
+      "name": "no-console",
+      "level": "warn"
+    },
+    {
+      "name": "max-len",
+      "level": "error",
+      "options": [{ "code": 100 }]
+    }
+  ]
+}
+```
+
+### Importing Existing Config
+
+You can import an existing ESLint configuration:
+
+```bash
+eslint-config-generator --import
+```
+
+This will detect and import settings from:
+- .eslintrc
+- .eslintrc.json
+- .eslintrc.js
+- .eslintrc.yaml
+- .eslintrc.yml
 
 ## Configuration Options
 
-### Project Types
-- JavaScript (ES5, ES6+)
-- TypeScript
-- Mixed JavaScript/TypeScript
+### Environments
 
-### Framework Support
-- React
-- Vue.js
+- Browser
 - Node.js
-- Express
-- Next.js
-- Vanilla JavaScript
+- Both
 
-### Style Customization
-- Indentation (spaces/tabs)
-- Quotes (single/double)
-- Semicolons (always/never)
-- Trailing commas
-- Max line length
-- And more...
+### Frameworks
 
-## Example Configurations
+- React (with React Hooks rules)
+- Vue.js (with Vue 3 recommended rules)
+- Next.js (with Next.js specific rules)
+- Express (with Node.js recommended rules)
+- Node.js (with Node.js recommended rules)
+- Angular (with Angular ESLint rules)
+- Svelte (with Svelte recommended rules)
+- Nuxt.js (with Nuxt.js recommended rules)
 
-### Basic JavaScript Project
-```json
-{
-  "extends": "eslint:recommended",
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "rules": {
-    "indent": ["error", 2],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"]
-  }
-}
-```
+### Features
 
-### TypeScript React Project
-```json
-{
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react"],
-  "rules": {
-    // Custom rules...
-  }
-}
-```
+- **Prettier**: Integrates ESLint with Prettier
+- **Import**: Adds rules for import/export syntax
+- **Jest**: Adds support for Jest testing
+- **A11y**: Adds accessibility rules
+- **Performance**: Adds performance optimization rules
+- **Security**: Adds security-related rules
+
+### Style Options
+
+- **Indent**: 2 spaces, 4 spaces, or tabs
+- **Quotes**: Single or double quotes
+- **Semicolons**: Required or optional
+- **Trailing Commas**: None, ES5, or all
+- **Line Endings**: Unix (LF) or Windows (CRLF)
+- **Max Line Length**: Customizable character limit
+- **Bracket Style**: Same line or new line
+- **Array/Object Style**: Single line or multi-line
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/kadricaabuk/eslint-config-generator.git
-```
-
-2. Install dependencies:
-```bash
-cd eslint-config-generator
-npm install
-```
-
-3. Build the project:
-```bash
-npm run build
-```
-
-4. Run tests:
-```bash
-npm test
-```
-
-## Documentation
-
-For detailed documentation, please visit our [Wiki](https://github.com/kadricaabuk/eslint-config-generator/wiki).
-
-## Security
-
-For security issues, please see our [Security Policy](SECURITY.md).
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-- 📫 Report bugs via [GitHub Issues](https://github.com/kadricaabuk/eslint-config-generator/issues)
-- 💡 Request features via [Feature Request](https://github.com/kadricaabuk/eslint-config-generator/issues/new?template=feature_request.md)
-- 📖 Read our [Documentation](https://github.com/kadricaabuk/eslint-config-generator/wiki)
-
-## Author
-
-**Kadri Çabuk**
-- GitHub: [@kadricaabuk](https://github.com/kadricaabuk)
-
-## Acknowledgments
-
-- ESLint team for their amazing work
-- All contributors who have helped improve this project 
+MIT 

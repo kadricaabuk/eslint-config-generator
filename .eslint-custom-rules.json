@@ -1,0 +1,21 @@
+{
+  "name": "CustomReactRules",
+  "description": "Custom rules for React development",
+  "rules": [
+    {
+      "name": "react/jsx-max-props-per-line",
+      "level": "error",
+      "options": [{ "maximum": 1, "when": "multiline" }]
+    },
+    {
+      "name": "react/jsx-sort-props",
+      "level": "warn",
+      "options": [{ "callbacksLast": true, "shorthandFirst": true }]
+    },
+    {
+      "name": "react/jsx-no-bind",
+      "level": "warn",
+      "options": [{ "allowArrowFunctions": true }]
+    }
+  ]
+} 

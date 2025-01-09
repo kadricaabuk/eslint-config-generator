@@ -1,50 +1,22 @@
 {
-  "env": {
-    "es2021": true,
-    "browser": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended"
+  "configFormat": "json",
+  "environment": "browser",
+  "typescript": true,
+  "framework": "react",
+  "features": [
+    "prettier",
+    "import",
+    "jest",
+    "a11y",
+    "redux",
+    "airbnb-style"
   ],
-  "rules": {
-    "indent": [
-      "error",
-      "tab"
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "no-unused-vars": "error",
-    "no-console": "warn",
-    "no-debugger": "error",
-    "no-alert": "error",
-    "prefer-const": "error"
-  },
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "import"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "style": {
+    "indent": 2,
+    "quotes": "single",
+    "semicolons": "always",
+    "trailingComma": "es5",
+    "lineEnding": "unix",
+    "maxLineLength": 100
   }
 }
