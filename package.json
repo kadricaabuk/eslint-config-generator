@@ -1,0 +1,62 @@
+{
+  "name": "eslint-config-generator",
+  "version": "1.0.0",
+  "description": "A modern, interactive ESLint configuration generator for JavaScript and TypeScript projects",
+  "main": "src/index.js",
+  "bin": {
+    "eslint-config-generator": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "generator",
+    "cli",
+    "react",
+    "typescript",
+    "javascript",
+    "mobx",
+    "airbnb",
+    "google",
+    "standard",
+    "prettier",
+    "lint",
+    "style-guide",
+    "code-quality",
+    "code-style"
+  ],
+  "author": {
+    "name": "Kadri Çabuk",
+    "email": "kadricabuk@gmail.com",
+    "url": "https://github.com/kadricaabuk"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadricaabuk/eslint-config-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/kadricaabuk/eslint-config-generator/issues"
+  },
+  "homepage": "https://github.com/kadricaabuk/eslint-config-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.5",
+    "@babel/core": "^7.22.0",
+    "@babel/eslint-parser": "^7.22.0",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-mobx": "^0.0.9",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9"
+  }
+}
